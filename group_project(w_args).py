@@ -100,6 +100,13 @@ class Player:
         Args:
             name (str): a str containing what the player input for their name.
         """
+        self.name = name
+        self.scoreboard = {}
+        self.scoreboard_upperhalf = 0
+        self.scoreboard_lowerhalf = 0
+        self._scoreboard_lowerbonus = 0
+        self.scoreboard_total = 0 
+        
     def add_dice_rolled(self, rolled, value):
         """ MILTO 
         This function takes the dice rolls and adds them to the scoreboard
@@ -113,6 +120,7 @@ class Player:
         Args:
             value (int): the amount to be added to the scoreboard
         """
+        self.scoreboard_upperhalf += value
     def add_upper_bonus(self): 
         """ADAM
         This function compares the top scoreboard with the values needed to earn a bonus
