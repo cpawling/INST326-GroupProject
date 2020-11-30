@@ -6,6 +6,7 @@
 class Roll:
     def __init__(self):
 
+
     def numbers(self,dice_count):
         """
             combined Check to see if player got as many of a particular number as possible.
@@ -15,19 +16,17 @@ class Roll:
         Args:
             dice_count (list): a list containing what the player rolled.
         """
-    def small_straight (self,dice_count):
+    def straight (self,dice_count):
     """
+        Small Straight
         Check to see if player got four sequential dice.
         Ex: 1,2,3,4 or 3,4,5,6
         Points: 30’’’
         Checks to see if dice are in sequential order between 1-5
     Args:
             dice_count (list): a list containing what the player rolled.
-    """
-
-
-    def large_straight(self,dice_count):
-    """
+        
+        Large Straight
         Check to see if player got five sequential dice
         Ex: 1,2,3,4,5 or 2,3,4,5,6
         Points: 40’’’
