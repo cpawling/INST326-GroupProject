@@ -47,11 +47,14 @@ class Roll:
     """
             dice_count.sort()
         if len(set(dice_count))) != 2:
-            Return False
+            fullhouse = False
         elif dice_count[0] != dice_count[3] or dice_count[1] != dice_list[4]:
-            Return True
+            fullhouse = True
             
-        Return False
+        else:
+            fullhouse = False
+        if fullhouse == True:
+            fullhousescore = 50
 
     def chance_update(self,dice_count):
     """ NIKITA 
@@ -70,8 +73,11 @@ class Roll:
     Args:
             dice_count (list): a list containing what the player rolled.
     """
+        self.yahtzeepoints = 0 
         if len(set(dice_count)) == 1:
             return True
+            print('Yahtzee!')
+            self.yahtzeepoints += 50 
         return False 
 
     def keep_dice(self)
