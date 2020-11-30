@@ -16,23 +16,15 @@ class Roll:
         Args:
             dice_count (list): a list containing what the player rolled.
         """
-<<<<<<< Updated upstream
-    def straight (self,dice_count):
-=======
     def just_straight (self,dice_count):
->>>>>>> Stashed changes
     """
         Small Straight
         Check to see if player got four sequential dice.
         Ex: 1,2,3,4 or 3,4,5,6
         Points: 30’’’
-        Checks to see if dice are in sequential order between 1-5
+        Checks to see if dice are in sequentiagl order between 1-5
     Args:
             dice_count (list): a list containing what the player rolled.
-<<<<<<< Updated upstream
-        
-        Large Straight
-=======
             
             Check to see if player got as many of a particular number as possible.
             Get as many of the same nunber as possible 
@@ -41,19 +33,6 @@ class Roll:
         Args:
             dice_count (list): a list containing what the player rolled.
         
-    """
-    
-
-
-    def large_straight(self,dice_count):
-    """
->>>>>>> Stashed changes
-        Check to see if player got five sequential dice
-        Ex: 1,2,3,4,5 or 2,3,4,5,6
-        Points: 40’’’
-        Checks to see if dice are in sequential order between 2-6
-    Args:
-            dice_count (list): a list containing what the player rolled.
     """
 
     def check_full_house(self,dice_count):
