@@ -9,14 +9,18 @@ class Roll:
 
     def numbers(self,dice_count):
         """
-            combined Check to see if player got as many of a particular number as possible.
+            Check to see if player got as many of a particular number as possible.
             Get as many of the same nunber as possible 
             Function checks to see if there are at least one pair of: one, two, three, four, five, and six
             Uses Arguments
         Args:
             dice_count (list): a list containing what the player rolled.
         """
+<<<<<<< Updated upstream
     def straight (self,dice_count):
+=======
+    def just_straight (self,dice_count):
+>>>>>>> Stashed changes
     """
         Small Straight
         Check to see if player got four sequential dice.
@@ -25,8 +29,25 @@ class Roll:
         Checks to see if dice are in sequential order between 1-5
     Args:
             dice_count (list): a list containing what the player rolled.
+<<<<<<< Updated upstream
         
         Large Straight
+=======
+            
+            Check to see if player got as many of a particular number as possible.
+            Get as many of the same nunber as possible 
+            Function checks to see if there are at least one pair of: one, two, three, four, five, and six
+            Uses Arguments
+        Args:
+            dice_count (list): a list containing what the player rolled.
+        
+    """
+    
+
+
+    def large_straight(self,dice_count):
+    """
+>>>>>>> Stashed changes
         Check to see if player got five sequential dice
         Ex: 1,2,3,4,5 or 2,3,4,5,6
         Points: 40’’’
