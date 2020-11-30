@@ -42,6 +42,13 @@ class Roll:
     Args:
             dice_count (list): a list containing what the player rolled.
     """
+            dice_count.sort()
+        if len(set(dice_count))) != 2:
+            Return False
+        elif dice_count[0] != dice_count[3] or dice_count[1] != dice_list[4]:
+            Return True
+            
+        Return False
 
     def chance_update(self,dice_count):
     """
