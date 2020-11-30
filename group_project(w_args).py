@@ -47,14 +47,15 @@ class Roll:
     """
             dice_count.sort()
         if len(set(dice_count))) != 2:
+            return False
             fullhouse = False
         elif dice_count[0] != dice_count[3] or dice_count[1] != dice_list[4]:
             fullhouse = True
-            
+            return True
         else:
             fullhouse = False
         if fullhouse == True:
-            fullhousescore = 50
+            Points += 50
 
     def chance_update(self,dice_count):
     """ NIKITA 
@@ -73,11 +74,10 @@ class Roll:
     Args:
             dice_count (list): a list containing what the player rolled.
     """
-        self.yahtzeepoints = 0 
         if len(set(dice_count)) == 1:
             return True
             print('Yahtzee!')
-            self.yahtzeepoints += 50 
+            Points += 50 
         return False 
 
     def keep_dice(self)
@@ -113,20 +113,20 @@ class Player:
         self._scoreboard_lowerbonus = 0
         self.scoreboard_total = 0 
         
-    def add_dice_rolled(self, rolled, value):
+    def add_dice_rolled(self, rolled, Points):
         """ MILTO 
         This function takes the dice rolls and adds them to the scoreboard
         Args:
             rolled (list): a list containing what the player rolled.
             value (int): the amount to be added to the scoreboard
         """
-    def add_upper_score(self, value):
+    def add_upper_score(self, Points):
         """ CHARLES 
         This function adds a rolled score to the top part of the scoreboard, which tracks ones, twos, threes, fours, fives, and sixes.
         Args:
             value (int): the amount to be added to the scoreboard
         """
-        self.scoreboard_upperhalf += value
+        self.scoreboard_upperhalf += Points
     def add_upper_bonus(self): 
         """ADAM
         This function compares the top scoreboard with the values needed to earn a bonus
