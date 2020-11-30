@@ -112,3 +112,7 @@ class Player:
         """
         This function prints the scoreboard for the user to see
         """
+def drive_game(self):
+        """
+        Drives game 
+        """
