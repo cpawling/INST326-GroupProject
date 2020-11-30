@@ -8,7 +8,7 @@ class Roll:
 
     def numbers(self,dice_count):
         """
-            Check to see if player got as many of a particular number as possible.
+            combined Check to see if player got as many of a particular number as possible.
             Get as many of the same nunber as possible 
             Function checks to see if there are at least one pair of: one, two, three, four, five, and six
             Uses Arguments
