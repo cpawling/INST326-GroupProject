@@ -70,6 +70,9 @@ class Roll:
     Args:
             dice_count (list): a list containing what the player rolled.
     """
+        if len(set(dice_count)) == 1:
+            return True
+        return False 
 
     def keep_dice(self)
     """ MILTO
