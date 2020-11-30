@@ -90,20 +90,6 @@ class Roll:
         First roll, creates random value between one and six and returns list
     """
 
-    def get_current_dice(self):
-    """This function will return the (current) dice list that was kept (the one in pay)"""
-
-
-    def get_kept_dice(self):
-    """This function will return the current kept dice list """
-
-
-    def forced_keep(self, dice_count):
-    """
-    This function will just force the roll to be added to the kept dice list. This is used after your third roll
-    Args:
-            dice_count (list): a list containing what the player rolled.
-    """"
 class Player: 
 
     def __init__(self, name):
