@@ -6,66 +6,15 @@
 class Roll:
     def __init__(self):
 
-    def ones(self,dice_count):
+    def numbers(self,dice_count):
         """
-            Check to see if player got as many ones as possible.
-            Get as many ones as possible 
-            Function checks to see if there are at least one pair of: one
+            Check to see if player got as many of a particular number as possible.
+            Get as many of the same nunber as possible 
+            Function checks to see if there are at least one pair of: one, two, three, four, five, and six
             Uses Arguments
         Args:
             dice_count (list): a list containing what the player rolled.
         """
-
-    def twos(self,dice_count):
-        """ 
-            Check to see if player got as many twos as possible.
-            Points: Quantity of how many twos that are rolled”
-            Get as many twos as possible
-            Function checks to see if there are at least one pair of: twos
-        Args:
-            dice_count (list): a list containing what the player rolled.
-        """
-
-    def threes(self,dice_count):
-        """
-            Check to see if player got as many threes as possible.
-            Points: Quantity of how many threes that are rolled”
-            Roll as many threes as possible
-            Function checks to see if there are at least one pair of: threes
-        Args:
-            dice_count (list): a list containing what the player rolled.
-        """
-
-    def fours(self,dice_count):
-        """
-            Check to see if player got as many fours as possible.
-            Points: Quantity of how many fours that are rolled”
-            Roll as many fours as possible
-            Function checks to see if there are at least one pair of: Four
-        Args:
-            dice_count (list): a list containing what the player rolled.
-        """
-
-    def fives(self,dice_count):
-        """
-            Check to see if player got as many fives as possible.
-            Points: Quantity of how many fives that are rolled”
-            Roll as many fives as possible
-            Function checks to see if there are at least one pair of: Fives
-        Args:
-            dice_count (list): a list containing what the player rolled.
-        """
-
-    def sixes(self,dice_count):
-        """
-            Check to see if player got as many sixes as possible.
-            Points: Quantity of how many sixes that are rolled”
-            Roll as many sixes as possible
-            Function checks to see if there are at least one pair of: Sixes
-        Args:
-            dice_count (list): a list containing what the player rolled.
-        """
-
     def small_straight (self,dice_count):
     """
         Check to see if player got four sequential dice.
