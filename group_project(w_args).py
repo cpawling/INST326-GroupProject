@@ -6,6 +6,7 @@
 class Roll:
     def __init__(self):
 
+
     def numbers(self,dice_count):
         """
             Check to see if player got as many of a particular number as possible.
