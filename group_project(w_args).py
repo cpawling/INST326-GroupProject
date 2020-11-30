@@ -63,10 +63,6 @@ class Roll:
     """
 
 
-    def roll_dice(self):
-    """
-        First roll, creates random value between one and six and returns list
-    """
     
 
     def keep_dice(self)
@@ -77,11 +73,14 @@ class Roll:
     list 
 
     """
-    def  reroll_dice(self, dice_count):
+    def  roll_dice(self, dice_count):
     """
         This function will roll again, but based on what's left of the original roll
     Args:
             dice_count (list): a list containing what the player rolled.
+    
+    
+        First roll, creates random value between one and six and returns list
     """
 
     def get_current_dice(self):
