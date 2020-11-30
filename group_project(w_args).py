@@ -7,7 +7,8 @@ class Roll:
     def __init__(self):
         
     def numbers(self,dice_count):
-        """
+        """ Nikita
+        
             Check to see if player got as many of a particular number as possible.
             Get as many of the same nunber as possible 
             Function checks to see if there are at least one pair of: one, two, three, four, five, and six
@@ -16,7 +17,8 @@ class Roll:
             dice_count (list): a list containing what the player rolled.
         """
     def straight (self,dice_count):
-    """
+    """Nikita
+    
         Small Straight
         Check to see if player got four sequential dice.
         Ex: 1,2,3,4 or 3,4,5,6
@@ -35,7 +37,8 @@ class Roll:
     """
 
     def check_full_house(self,dice_count):
-    """
+    """ CHARLES
+    
         Check to see if player got three of a kind + 1 pair
         Ex: 1,1,1,6,6 or 2,2,5,5,5
         Points: 25
@@ -51,7 +54,7 @@ class Roll:
         Return False
 
     def chance_update(self,dice_count):
-    """
+    """ NIKITA 
         For when the outcome of dice doesn’t fit any other category.
         Chance is the sum of the dice.
     Args:
@@ -60,7 +63,7 @@ class Roll:
 
 
     def Yahtzee (self,dice_count):
-    """ 
+    """ CHARLES 
         Check to see if player got five of a kind. 
         Ex: 2,2,2,2,2 or 5,5,5,5,5
         Points: 50
@@ -69,7 +72,7 @@ class Roll:
     """
 
     def keep_dice(self)
-    """
+    """ MILTO
         This Function will ask the player which dice they want to keep and store in separate list 
 
     Return:
@@ -77,7 +80,7 @@ class Roll:
 
     """
     def  roll_dice(self, dice_count):
-    """
+    """ MILTO
         This function will roll again, but based on what's left of the original roll
     Args:
             dice_count (list): a list containing what the player rolled.
@@ -95,31 +98,32 @@ class Player:
             name (str): a str containing what the player input for their name.
         """
     def add_dice_rolled(self, rolled, value):
-        """
+        """ MILTO 
         This function takes the dice rolls and adds them to the scoreboard
         Args:
             rolled (list): a list containing what the player rolled.
             value (int): the amount to be added to the scoreboard
         """
     def add_upper_score(self, value):
-        """
+        """ CHARLES 
         This function adds a rolled score to the top part of the scoreboard, which tracks ones, twos, threes, fours, fives, and sixes.
         Args:
             value (int): the amount to be added to the scoreboard
         """
-    def add_upper_bonus(self):
-        """
+    def add_upper_bonus(self): 
+        """ADAM
         This function compares the top scoreboard with the values needed to earn a bonus
         """
     def get_upper_score(self):
-        """
+        """ADAM
         This function sums the users top score and bonus if any points were earned
         """
     def final_scoreboard(self):
-        """
+        """ADAM
         This function prints the scoreboard for the user to see
         """
+
 def drive_game(self):
-        """
+        """ EVERYONE 
         Drives game 
         """
