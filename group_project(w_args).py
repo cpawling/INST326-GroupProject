@@ -5,8 +5,7 @@
 
 class Roll:
     def __init__(self):
-
-
+        
     def numbers(self,dice_count):
         """
             Check to see if player got as many of a particular number as possible.
@@ -16,23 +15,23 @@ class Roll:
         Args:
             dice_count (list): a list containing what the player rolled.
         """
-    def just_straight (self,dice_count):
+    def straight (self,dice_count):
     """
         Small Straight
         Check to see if player got four sequential dice.
         Ex: 1,2,3,4 or 3,4,5,6
         Points: 30’’’
-        Checks to see if dice are in sequentiagl order between 1-5
+        Checks to see if dice are in sequential order between 1-5
     Args:
             dice_count (list): a list containing what the player rolled.
-            
-            Check to see if player got as many of a particular number as possible.
-            Get as many of the same nunber as possible 
-            Function checks to see if there are at least one pair of: one, two, three, four, five, and six
-            Uses Arguments
-        Args:
-            dice_count (list): a list containing what the player rolled.
         
+        Large Straight
+        Check to see if player got five sequential dice
+        Ex: 1,2,3,4,5 or 2,3,4,5,6
+        Points: 40’’’
+        Checks to see if dice are in sequential order between 2-6
+    Args:
+            dice_count (list): a list containing what the player rolled.
     """
 
     def check_full_house(self,dice_count):
@@ -43,13 +42,6 @@ class Roll:
     Args:
             dice_count (list): a list containing what the player rolled.
     """
-            dice_count.sort()
-        if len(set(dice_count))) != 2:
-            Return False
-        elif dice_count[0] != dice_count[3] or dice_count[1] != dice_list[4]:
-            Return True
-            
-        Return False
 
     def chance_update(self,dice_count):
     """
@@ -69,9 +61,6 @@ class Roll:
             dice_count (list): a list containing what the player rolled.
     """
 
-
-    
-
     def keep_dice(self)
     """
         This Function will ask the player which dice they want to keep and store in separate list 
@@ -90,6 +79,20 @@ class Roll:
         First roll, creates random value between one and six and returns list
     """
 
+    def get_current_dice(self):
+    """This function will return the (current) dice list that was kept (the one in pay)"""
+
+
+    def get_kept_dice(self):
+    """This function will return the current kept dice list """
+
+
+    def forced_keep(self, dice_count):
+    """
+    This function will just force the roll to be added to the kept dice list. This is used after your third roll
+    Args:
+            dice_count (list): a list containing what the player rolled.
+    """"
 class Player: 
 
     def __init__(self, name):
