@@ -136,6 +136,12 @@ class Player:
         """ADAM
         This function compares the top scoreboard with the values needed to earn a bonus
         """
+        score_for_bonus = 63
+        if self.scoreboard_upperhalf >= score_for_bonus:
+            self.scoreboard['upper bonus'] = 50
+        else:
+            self.scoreboard['upper bonus'] = 0
+        self.upper_bonus = self.scoreboard['upper bonus']
     def get_upper_score(self):
         """ADAM
         This function returns the users top score and bonus if any points were earned
@@ -145,8 +151,11 @@ class Player:
         """ADAM
         This function prints the scoreboard for the user to see
         """
+        for x, y in self.scoreboard:
+            print(f'{x} : {y}')
+        
 
 def drive_game(self):
         """ EVERYONE 
-        Drives game 
+        Drives game calling functions from the classes
         """
