@@ -16,6 +16,11 @@ class Roll:
         Args:
             dice_count (list): a list containing what the player rolled.
         """
+        
+        #counts --> counts # times something appears in list 
+        #store rolled number in list + count # times each number appears 
+        #number that appears the most --> goes in respective list
+        
     def straight (self,dice_count):
     """Nikita
     
