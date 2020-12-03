@@ -138,8 +138,9 @@ class Player:
         """
     def get_upper_score(self):
         """ADAM
-        This function sums the users top score and bonus if any points were earned
+        This function returns the users top score and bonus if any points were earned
         """
+        return self.scoreboard_upperhalf
     def final_scoreboard(self):
         """ADAM
         This function prints the scoreboard for the user to see
