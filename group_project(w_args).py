@@ -121,17 +121,7 @@ class Roll:
 
     def keep_dice(self)
 <<<<<<< Updated upstream
-    """ MILTO
-        This Function will ask the player which dice they want to keep and store in separate list 
-
-    Return:
-    list 
-
-    """
     
-        keep_input = input('which dice do you want to keep (comma separated: e.g. 1,1,5)? ')
-        split_input = keep_input.split(',')
-        
 =======
     """
       Milto  This Function will ask the player which dice they want to keep and store in separate list 
