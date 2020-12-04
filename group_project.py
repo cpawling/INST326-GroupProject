@@ -4,12 +4,14 @@
 #ADAM MILLS
 import random
 from collections import Counter
-from statistics import mode 
+#from statistics import mode 
 
 class Roll:
     def __init__(self):
-        self._current_dice_list = list()
-        self._current_dice_list = list() 
+           
+           self._current_dice_list = list()
+           self._current_kept_dice = list()
+    
     def roll_dice(self):
         '''Nikita
         The purpose of this function is to simulate the rolling of a dice, three times. After each roll, the user can decide which 'dice' they
@@ -59,7 +61,7 @@ class Roll:
             Small Straight
             Check to see if player got four sequential dice.
             Ex: 1,2,3,4 or 3,4,5,6
-            Points: 30’’’
+            Points: 30
             Checks to see if dice are in sequential order between 1-5
         Args:
                 dice_count (list): a list containing what the player rolled.
@@ -67,7 +69,7 @@ class Roll:
             Large Straight
             Check to see if player got five sequential dice
             Ex: 1,2,3,4,5 or 2,3,4,5,6
-            Points: 40’’’
+            Points: 40
             Checks to see if dice are in sequential order between 2-6
         Args:
                 dice_count (list): a list containing what the player rolled.
@@ -98,22 +100,22 @@ class Roll:
     #full house --> was made for points, ommitted to make code work, will include in final draft
 
     def chance_update(self,dice_count):
-        """ NIKITA 
-            For when the outcome of dice doesn’t fit any other category.
+         """
+        NIKITA
+            For when the outcome of dice doesn't fit any other category.
             Chance is the sum of the dice.
         Args:
-                dice_count (list): a list containing what the player rolled.
+            dice_count (list): a list containing what the player rolled.
         """
 
-
     def Yahtzee (self,dice_count):
-        """ CHARLES 
+        ''' CHARLES 
             Check to see if player got five of a kind. 
             Ex: 2,2,2,2,2 or 5,5,5,5,5
             Points: 50
         Args:
                 dice_count (list): a list containing what the player rolled.
-        """
+        '''
         if len(set(dice_count)) == 1:
             return True
             print('Yahtzee!')
@@ -136,11 +138,11 @@ class Roll:
             
 class Player: 
     def __init__(self, name):
-        """ 
-        This function establishes different variables, which will be used to track the player’s name and parts of the scoreboard
-        
+       
+        """
+        This function establishes different variables, which will be used to track the players  name and parts of the scoreboard
         Args:
-            name (str): a str containing what the player input for their name.
+            name (str): a str containing what the player input for their name.capitalize
         """
         self.name = name
         self.scoreboard = {}
@@ -182,7 +184,7 @@ class Player:
         This function prints the scoreboard for the user to see
         """
         for x, y in self.scoreboard:
-            print(f'{x} : {y}')
+            print(x,y)
         
 
 def drive_game(self):
