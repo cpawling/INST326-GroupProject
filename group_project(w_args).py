@@ -120,6 +120,7 @@ class Roll:
         return False 
 
     def keep_dice(self)
+<<<<<<< Updated upstream
     """ MILTO
         This Function will ask the player which dice they want to keep and store in separate list 
 
@@ -131,6 +132,18 @@ class Roll:
         keep_input = input('which dice do you want to keep (comma separated: e.g. 1,1,5)? ')
         split_input = keep_input.split(',')
         
+=======
+    """
+      Milto  This Function will ask the player which dice they want to keep and store in separate list 
+
+    Return:
+    list 
+    
+     """
+     keep_input = input('which dice do you want to keep (comma separated: e.g. 1,1,5)? ')
+     split_input = keep_input.split(',')
+     
+>>>>>>> Stashed changes
         if keep_input == '':
             return self._current_dice_list
         split_input_int = [int(item) for item in split_input]
@@ -139,11 +152,17 @@ class Roll:
             self._current_kept_dice.append(die)
     
     
+<<<<<<< Updated upstream
 
     
     def  roll_dice(self, dice_count):
     """ MILTO
         This function will roll again, but based on what's left of the original roll
+=======
+    def  roll_dice(self, dice_count):
+    """
+       Milto This function will roll again, but based on what's left of the original roll
+>>>>>>> Stashed changes
     Args:
             dice_count (list): a list containing what the player rolled.
     
