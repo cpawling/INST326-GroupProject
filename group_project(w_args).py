@@ -185,3 +185,6 @@ class Player:
 def drive_game(self):
         """ EVERYONE 
         Drives game calling functions from the classes """
+        Name = Player(input('What is your name'))
+        first_roll = Roll.roll_dice()
+        
