@@ -7,9 +7,9 @@ from collections import Counter
 from statistics import mode 
 
 class Roll:
-    def __init__(self):
+    #def __init__(self):
         #fill here        
-    def roll_dice():
+    def roll_dice(self):
         '''Nikita
         The purpose of this function is to simulate the rolling of a dice, three times. After each roll, the user can decide which 'dice' they
         would like to roll again, and which they would like to keep.
@@ -80,17 +80,17 @@ class Roll:
         Args:
                 dice_count (list): a list containing what the player rolled.
         """
-            dice_count.sort()
-        if len(set(dice_count))) != 2:
-            return False
+        dice_count.sort()
+        if len(set(dice_count))!= 2:
             fullhouse = False
-        elif dice_count[0] != dice_count[3] or dice_count[1] != dice_list[4]:
+            return False
+        elif dice_count[0] != dice_count[3] or dice_count[1] != dice_count[4]:
             fullhouse = True
             return True
         else:
             fullhouse = False
-        if fullhouse == True:
-            Points += 50
+        #if fullhouse == True:
+           # Points += 50
 
     def chance_update(self,dice_count):
         """ NIKITA 
@@ -112,11 +112,13 @@ class Roll:
         if len(set(dice_count)) == 1:
             return True
             print('Yahtzee!')
-            Points += 50 
+            #Points += 50 
         return False 
 
     def keep_dice(self):
-        '''Docstring'''
+        '''MILTO
+
+        '''
         keep_input = input('which dice do you want to keep (comma separated: e.g. 1,1,5)? ')
         split_input = keep_input.split(',')
         if keep_input == '':
