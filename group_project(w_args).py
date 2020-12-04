@@ -185,3 +185,6 @@ def drive_game(self):
         
         
         """
+        Name = Player(input('What is your name?'))
+        first_roll = Roll.roll_dice()
+        
