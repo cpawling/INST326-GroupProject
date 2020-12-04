@@ -10,7 +10,8 @@ class Roll:
     def __init__(self):
         #fill here        
     def roll_dice():
-        '''The purpose of this function is to simulate the rolling of a dice, three times. After each roll, the user can decide which 'dice' they
+        '''Nikita
+        The purpose of this function is to simulate the rolling of a dice, three times. After each roll, the user can decide which 'dice' they
         would like to roll again, and which they would like to keep.
         Returns:
             Dice_count (list): list containing the final numbers rolled
