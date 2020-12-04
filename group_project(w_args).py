@@ -51,10 +51,6 @@ class Roll:
             dice_count (list): a list containing what the player rolled.
         """
         
-        #counts --> counts # times something appears in list 
-        #store rolled number in list + count # times each number appears 
-        #number that appears the most --> goes in respective list
-        
     def straight (self,dice_count):
     """Nikita
     
@@ -74,6 +70,7 @@ class Roll:
     Args:
             dice_count (list): a list containing what the player rolled.
     """
+    for 
 
     def check_full_house(self,dice_count):
     """ CHARLES
@@ -119,10 +116,7 @@ class Roll:
             Points += 50 
         return False 
 
-    def keep_dice(self)
-<<<<<<< Updated upstream
-    
-=======
+    def keep_dice(self)     
     """
       Milto  This Function will ask the player which dice they want to keep and store in separate list 
 
@@ -133,7 +127,6 @@ class Roll:
      keep_input = input('which dice do you want to keep (comma separated: e.g. 1,1,5)? ')
      split_input = keep_input.split(',')
      
->>>>>>> Stashed changes
         if keep_input == '':
             return self._current_dice_list
         split_input_int = [int(item) for item in split_input]
@@ -141,9 +134,8 @@ class Roll:
         for die in split_input_int:
             self._current_kept_dice.append(die)
     
-    
-    
     def  roll_dice(self, dice_count):
+    
     """ MILTO
         This function will roll again, but based on what's left of the original roll
     """
@@ -151,10 +143,14 @@ class Roll:
         self._current_dice_list = [random.randint(1,6) for die in range(0,5)]
         print (f'you rolled {self._current_dice_list} ! \n') 
         return self._current_dice_list
+
+
     def  roll_dice(self, dice_count):
+    """
        Milto This function will roll again, but based on what's left of the original roll
     Args:
             dice_count (list): a list containing what the player rolled.
+    
     
         First roll, creates random value between one and six and returns list
     """
@@ -178,15 +174,14 @@ class Player:
         """ MILTO 
         This function takes the dice rolls and adds them to the scoreboard
         Args:
-            rolled (list): a list containing what the player rolled.
-            value (int): the amount to be added to the scoreboard
+            ROLLED (list): a list containing what the player rolled.
+            POINTS (int): the amount to be added to the scoreboard
         """
     def add_upper_score(self, Points):
-        """ CHARLES 
+        """CHARLES 
         This function adds a rolled score to the top part of the scoreboard, which tracks ones, twos, threes, fours, fives, and sixes.
         Args:
-            value (int): the amount to be added to the scoreboard
-        """
+            value (int): the amount to be added to the scoreboard"""
         self.scoreboard_upperhalf += Points
     def add_upper_bonus(self): 
         """ADAM
