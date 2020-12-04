@@ -125,21 +125,6 @@ class Roll:
         
         for die in split_input_int:
             self._current_kept_dice.append(die)
-        
-    def  roll_dice(self, dice_count):
-        """ MILTO
-            This function will roll again, but based on what's left of the original roll
-        """
-        self._current_kept_dice.clear()
-        self._current_dice_list = [random.randint(1,6) for die in range(0,5)]
-        print (f'you rolled {self._current_dice_list} ! \n') 
-        return self._current_dice_list
-    def  roll_dice(self, dice_count):
-        '''Milto 
-        This function will roll again, but based on what's left of the original roll
-        Args:
-        dice_count (list): a list containing what the player rolled.
-        First roll, creates random value between one and six and returns list'''
 
 class Player: 
     def __init__(self, name):
