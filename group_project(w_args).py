@@ -70,7 +70,6 @@ class Roll:
     Args:
             dice_count (list): a list containing what the player rolled.
     """
-    for 
 
     def check_full_house(self,dice_count):
     """ CHARLES
@@ -116,7 +115,18 @@ class Roll:
             Points += 50 
         return False 
 
-    def keep_dice(self)     
+    def keep_dice(self)
+    """ MILTO
+        This Function will ask the player which dice they want to keep and store in separate list 
+
+    Return:
+    list 
+
+    """
+    
+        keep_input = input('which dice do you want to keep (comma separated: e.g. 1,1,5)? ')
+        split_input = keep_input.split(',')
+        
     """
       Milto  This Function will ask the player which dice they want to keep and store in separate list 
 
@@ -133,9 +143,8 @@ class Roll:
         
         for die in split_input_int:
             self._current_kept_dice.append(die)
-    
+        
     def  roll_dice(self, dice_count):
-    
     """ MILTO
         This function will roll again, but based on what's left of the original roll
     """
@@ -143,19 +152,14 @@ class Roll:
         self._current_dice_list = [random.randint(1,6) for die in range(0,5)]
         print (f'you rolled {self._current_dice_list} ! \n') 
         return self._current_dice_list
-
-
     def  roll_dice(self, dice_count):
-    """
        Milto This function will roll again, but based on what's left of the original roll
     Args:
             dice_count (list): a list containing what the player rolled.
     
-    
         First roll, creates random value between one and six and returns list
-    """
-class Player: 
 
+class Player: 
     def __init__(self, name):
         """ 
         This function establishes different variables, which will be used to track the player’s name and parts of the scoreboard
