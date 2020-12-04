@@ -82,15 +82,18 @@ class Roll:
         """
         dice_count.sort()
         if len(set(dice_count))!= 2:
-            fullhouse = False
-            return False
+            print('You did not roll a full house!')
+            #fullhouse = False
+            #return False
         elif dice_count[0] != dice_count[3] or dice_count[1] != dice_count[4]:
-            fullhouse = True
-            return True
-        else:
-            fullhouse = False
+            print('You rolled a full house!')
+            #fullhouse = True
+            #return True
+        #else:
+         #   fullhouse = False
         #if fullhouse == True:
            # Points += 50
+    #full house --> was made for points, ommitted to make code work, will include in final draft
 
     def chance_update(self,dice_count):
         """ NIKITA 
