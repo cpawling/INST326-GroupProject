@@ -52,34 +52,34 @@ class Roll:
         """
         
     def straight (self,dice_count):
-    """Nikita
-    
-        Small Straight
-        Check to see if player got four sequential dice.
-        Ex: 1,2,3,4 or 3,4,5,6
-        Points: 30’’’
-        Checks to see if dice are in sequential order between 1-5
-    Args:
-            dice_count (list): a list containing what the player rolled.
+        """Nikita
         
-        Large Straight
-        Check to see if player got five sequential dice
-        Ex: 1,2,3,4,5 or 2,3,4,5,6
-        Points: 40’’’
-        Checks to see if dice are in sequential order between 2-6
-    Args:
-            dice_count (list): a list containing what the player rolled.
-    """
+            Small Straight
+            Check to see if player got four sequential dice.
+            Ex: 1,2,3,4 or 3,4,5,6
+            Points: 30’’’
+            Checks to see if dice are in sequential order between 1-5
+        Args:
+                dice_count (list): a list containing what the player rolled.
+            
+            Large Straight
+            Check to see if player got five sequential dice
+            Ex: 1,2,3,4,5 or 2,3,4,5,6
+            Points: 40’’’
+            Checks to see if dice are in sequential order between 2-6
+        Args:
+                dice_count (list): a list containing what the player rolled.
+        """
 
     def check_full_house(self,dice_count):
-    """ CHARLES
-    
-        Check to see if player got three of a kind + 1 pair
-        Ex: 1,1,1,6,6 or 2,2,5,5,5
-        Points: 25
-    Args:
-            dice_count (list): a list containing what the player rolled.
-    """
+        """ CHARLES
+        
+            Check to see if player got three of a kind + 1 pair
+            Ex: 1,1,1,6,6 or 2,2,5,5,5
+            Points: 25
+        Args:
+                dice_count (list): a list containing what the player rolled.
+        """
             dice_count.sort()
         if len(set(dice_count))) != 2:
             return False
@@ -93,50 +93,32 @@ class Roll:
             Points += 50
 
     def chance_update(self,dice_count):
-    """ NIKITA 
-        For when the outcome of dice doesn’t fit any other category.
-        Chance is the sum of the dice.
-    Args:
-            dice_count (list): a list containing what the player rolled.
-    """
+        """ NIKITA 
+            For when the outcome of dice doesn’t fit any other category.
+            Chance is the sum of the dice.
+        Args:
+                dice_count (list): a list containing what the player rolled.
+        """
 
 
     def Yahtzee (self,dice_count):
-    """ CHARLES 
-        Check to see if player got five of a kind. 
-        Ex: 2,2,2,2,2 or 5,5,5,5,5
-        Points: 50
-    Args:
-            dice_count (list): a list containing what the player rolled.
-    """
+        """ CHARLES 
+            Check to see if player got five of a kind. 
+            Ex: 2,2,2,2,2 or 5,5,5,5,5
+            Points: 50
+        Args:
+                dice_count (list): a list containing what the player rolled.
+        """
         if len(set(dice_count)) == 1:
             return True
             print('Yahtzee!')
             Points += 50 
         return False 
 
-    def keep_dice(self)
-    """ MILTO
-        This Function will ask the player which dice they want to keep and store in separate list 
-
-    Return:
-    list 
-
-    """
-    
+    def keep_dice(self):
+        '''Docstring''''
         keep_input = input('which dice do you want to keep (comma separated: e.g. 1,1,5)? ')
         split_input = keep_input.split(',')
-        
-    """
-      Milto  This Function will ask the player which dice they want to keep and store in separate list 
-
-    Return:
-    list 
-    
-     """
-     keep_input = input('which dice do you want to keep (comma separated: e.g. 1,1,5)? ')
-     split_input = keep_input.split(',')
-     
         if keep_input == '':
             return self._current_dice_list
         split_input_int = [int(item) for item in split_input]
@@ -145,19 +127,19 @@ class Roll:
             self._current_kept_dice.append(die)
         
     def  roll_dice(self, dice_count):
-    """ MILTO
-        This function will roll again, but based on what's left of the original roll
-    """
+        """ MILTO
+            This function will roll again, but based on what's left of the original roll
+        """
         self._current_kept_dice.clear()
         self._current_dice_list = [random.randint(1,6) for die in range(0,5)]
         print (f'you rolled {self._current_dice_list} ! \n') 
         return self._current_dice_list
     def  roll_dice(self, dice_count):
-       Milto This function will roll again, but based on what's left of the original roll
-    Args:
-            dice_count (list): a list containing what the player rolled.
-    
-        First roll, creates random value between one and six and returns list
+        '''Milto 
+        This function will roll again, but based on what's left of the original roll
+        Args:
+        dice_count (list): a list containing what the player rolled.
+        First roll, creates random value between one and six and returns list'''
 
 class Player: 
     def __init__(self, name):
