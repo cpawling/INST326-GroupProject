@@ -11,6 +11,7 @@ class Roll:
         #fill here        
     def roll_dice():
         '''Nikita
+        Purpose:
         The purpose of this function is to simulate the rolling of a dice, three times. After each roll, the user can decide which 'dice' they
         would like to roll again, and which they would like to keep.
         Returns:
@@ -179,9 +180,4 @@ class Player:
 
 def drive_game(self):
         """ EVERYONE 
-        
-        Drives game calling functions from the classes 
-        
-        
-        
-        """
+        Drives game calling functions from the classes"""
