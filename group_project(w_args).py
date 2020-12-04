@@ -116,7 +116,7 @@ class Roll:
         return False 
 
     def keep_dice(self):
-        '''Docstring''''
+        '''Docstring'''
         keep_input = input('which dice do you want to keep (comma separated: e.g. 1,1,5)? ')
         split_input = keep_input.split(',')
         if keep_input == '':
