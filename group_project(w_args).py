@@ -39,6 +39,7 @@ class Roll:
         for x in roll3:
             dice_count[x] = random.randint(1,6)
             print ('The numbers rolled are:', dice_count)
+        return dice_count
                     
     def numbers(self,dice_count):
         """ Nikita
@@ -185,6 +186,11 @@ class Player:
 def drive_game(self):
         """ EVERYONE 
         Drives game calling functions from the classes """
-        Name = Player(input('What is your name'))
-        first_roll = Roll.roll_dice()
+        Play = input('Would you like to play?')
+        while Play == "yes":
+            Name = Player(input('What is your name'))
+            players_roll = Roll.roll_dice()
+            Roll.check_full_house(players_roll)
+            Play = 'done'
+        Play = input('Would you like to play again?')
         
