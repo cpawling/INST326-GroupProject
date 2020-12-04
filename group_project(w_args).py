@@ -156,7 +156,7 @@ class Player:
         self.scoreboard_upperhalf += Points
     def add_upper_bonus(self): 
         """ADAM
-        This function compares the top scoreboard with the values needed to earn a bonus
+        This function compares the top scoreboard with the points needed to earn a bonus
         """
         score_for_bonus = 63
         if self.scoreboard_upperhalf >= score_for_bonus:
