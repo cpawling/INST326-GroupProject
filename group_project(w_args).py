@@ -127,6 +127,20 @@ class Roll:
     list 
 
     """
+    
+        keep_input = input('which dice do you want to keep (comma separated: e.g. 1,1,5)? ')
+        split_input = keep_input.split(',')
+        
+        if keep_input == '':
+            return self._current_dice_list
+        split_input_int = [int(item) for item in split_input]
+        
+        for die in split_input_int:
+            self._current_kept_dice.append(die)
+    
+    
+
+    
     def  roll_dice(self, dice_count):
     """ MILTO
         This function will roll again, but based on what's left of the original roll
