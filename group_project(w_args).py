@@ -152,8 +152,6 @@ class Roll:
             self._current_kept_dice.append(die)
     
     
-<<<<<<< Updated upstream
-
     
     def  roll_dice(self, dice_count):
     """ MILTO
@@ -163,14 +161,10 @@ class Roll:
         self._current_dice_list = [random.randint(1,6) for die in range(0,5)]
         print (f'you rolled {self._current_dice_list} ! \n') 
         return self._current_dice_list
-=======
     def  roll_dice(self, dice_count):
-    """
        Milto This function will roll again, but based on what's left of the original roll
->>>>>>> Stashed changes
     Args:
             dice_count (list): a list containing what the player rolled.
-    
     
         First roll, creates random value between one and six and returns list
     """
