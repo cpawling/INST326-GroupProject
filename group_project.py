@@ -184,18 +184,19 @@ class Player:
         This function prints the scoreboard for the user to see
         """
         for x, y in self.scoreboard:
-            print(x,y)
-
-
+            print(x,y)   
+            
 def drive_game():
         """ EVERYONE 
         Drives game calling functions from the classes """
         Play = input('Would you like to play?')
-        while Play == "yes":
-            Name = Player(input('What is your name'))
-            players_roll = Roll.roll_dice()
-            Roll.check_full_house(players_roll)
-            Play = 'done'
+        if Play == "yes":
+            rolls = {}
+            categories = ["ones","twos","threes","fours","fives","sixes","Three-of-a-kind","Four-of-a-kind", "Full House", "Small Straight", "Large Straight", "Chance", "Yahtzee"]
+            categoriesdict = {"ones":[],"twos":[],"threes":[],"fours":[],"fives":[],"sixes":[],"Three-of-a-kind":[],"Four-of-a-kind":[], "Full House":[], "Small Straight":[], "Large Straight":[], "Chance":[], "Yahtzee":[]}
+            for i in categories:
+               roll1 = Roll.roll_dice
+            
         Play = input('Would you like to play again?')
 
 if __name__ == '__main__':
