@@ -187,7 +187,7 @@ class Player:
             print(x,y)
 
 
-def drive_game(self):
+def drive_game():
         """ EVERYONE 
         Drives game calling functions from the classes """
         Play = input('Would you like to play?')
