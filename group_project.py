@@ -185,7 +185,7 @@ class Player:
         """
         for x, y in self.scoreboard:
             print(x,y)
-        
+
 
 def drive_game(self):
         """ EVERYONE 
@@ -197,4 +197,6 @@ def drive_game(self):
             Roll.check_full_house(players_roll)
             Play = 'done'
         Play = input('Would you like to play again?')
-        
+
+if __name__ == '__main__':
+    drive_game()
