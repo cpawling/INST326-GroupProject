@@ -42,43 +42,20 @@ def roll_dice(self):
 class Checks:
     def __init__(self):
         ''' ADD DOC '''
+        #Need dice count?
         self._current_dice_list = list()
         self._current_kept_dice = list()
-    
-
-                    
-    def numbers(self,dice_count):
-        """ Nikita
-        
-            Check to see if player got as many of a particular number as possible.
-            Get as many of the same nunber as possible 
-            Function checks to see if there are at least one pair of: one, two, three, four, five, and six
-            Uses Arguments
-        Args:
-            dice_count (list): a list containing what the player rolled.
-        """
-        
-    def straight (self,dice_count):
-        """Nikita
-        
-            Small Straight
-            Check to see if player got four sequential dice.
-            Ex: 1,2,3,4 or 3,4,5,6
-            Points: 30
-            Checks to see if dice are in sequential order between 1-5
-        Args:
-                dice_count (list): a list containing what the player rolled.
-            
-            Large Straight
-            Check to see if player got five sequential dice
-            Ex: 1,2,3,4,5 or 2,3,4,5,6
-            Points: 40
-            Checks to see if dice are in sequential order between 2-6
-        Args:
-                dice_count (list): a list containing what the player rolled.
-        """
-
-    def check_full_house(self,dice_count):
+    def ones(self,dice_count):
+    def twos(self,dice_count):
+    def threes(self,dice_count):
+    def fours(self,dice_count):
+    def fives(self,dice_count):
+    def sixes(self,dice_count):
+    def three_of_a_kind(self,dice_count):
+    def four_of_a_kind(self,dice_count):
+    def smallstraight(self,dice_count):
+    def largestraight(self,dice_count):    
+    def full_house(self,dice_count):
         """ CHARLES
         
             Check to see if player got three of a kind + 1 pair
@@ -102,7 +79,7 @@ class Checks:
            # Points += 50
     #full house --> was made for points, ommitted to make code work, will include in final draft
 
-    def chance_update(self,dice_count):
+    def chance(self,dice_count):
          """
         NIKITA
             For when the outcome of dice doesn't fit any other category.
@@ -125,20 +102,6 @@ class Checks:
             #Points += 50 
         return False 
 
-    def keep_dice(self):
-        '''MILTO
-
-        '''
-        keep_input = input('which dice do you want to keep (comma separated: e.g. 1,1,5)? ')
-        split_input = keep_input.split(',')
-        if keep_input == '':
-            return self._current_dice_list
-        
-        split_input_int = [int(item) for item in split_input]
-        
-        for die in split_input_int:
-            self._current_kept_dice.append(die)
-            
 class Player: 
     def __init__(self, name):
        
