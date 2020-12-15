@@ -4,10 +4,9 @@
 #ADAM MILLS
 import random
 from collections import Counter
-import pandas as pe
 #from statistics import mode 
 
-def roll_dice(self):
+def roll_dice():
     '''Nikita
         The purpose of this function is to simulate the rolling of a dice, three times. After each roll, the user can decide which 'dice' they
         would like to roll again, and which they would like to keep.
@@ -72,14 +71,14 @@ class Checks:
             if i == 5:
                 fivesc += 5
     def sixes(self,dice_count):
-            sixesc = 0
+        sixesc = 0
         for i in dice_count:
             if i == 6:
                 sixesc += 6
-    def three_of_a_kind(self,dice_count):
-    def four_of_a_kind(self,dice_count):
-    def smallstraight(self,dice_count):
-    def largestraight(self,dice_count):    
+    #def three_of_a_kind(self,dice_count):
+    #def four_of_a_kind(self,dice_count):
+    #def smallstraight(self,dice_count):
+    #def largestraight(self,dice_count):    
     def full_house(self,dice_count):
         """ CHARLES
         
