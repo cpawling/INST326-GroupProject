@@ -45,12 +45,37 @@ class Checks:
         #Need dice count?
         self._current_dice_list = list()
         self._current_kept_dice = list()
+            
     def ones(self,dice_count):
+        onesc = 0
+        for i in dice_count:
+            if i == 1:
+                onesc += 1
     def twos(self,dice_count):
+        twosc = 0
+        for i in dice_count:
+            if i == 2:
+                twosc += 2
     def threes(self,dice_count):
+        threesc = 0
+        for i in dice_count:
+            if i == 3:
+                threesc += 3
     def fours(self,dice_count):
+        fourssc = 0
+        for i in dice_count:
+            if i == 4:
+                foursc += 4
     def fives(self,dice_count):
+        fivesc = 0
+        for i in dice_count:
+            if i == 5:
+                fivesc += 5
     def sixes(self,dice_count):
+            sixesc = 0
+        for i in dice_count:
+            if i == 6:
+                sixesc += 6
     def three_of_a_kind(self,dice_count):
     def four_of_a_kind(self,dice_count):
     def smallstraight(self,dice_count):
