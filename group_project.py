@@ -7,43 +7,45 @@ from collections import Counter
 import pandas as pe
 #from statistics import mode 
 
-class Roll:
-    def __init__(self):
-           
-           self._current_dice_list = list()
-           self._current_kept_dice = list()
-    
-    def roll_dice(self):
-        '''Nikita
+def roll_dice(self):
+    '''Nikita
         The purpose of this function is to simulate the rolling of a dice, three times. After each roll, the user can decide which 'dice' they
         would like to roll again, and which they would like to keep.
         Returns:
             Dice_count (list): list containing the final numbers rolled
-        '''     
-        #roll1
-        dice_count = []
-        for x in range(5):
-            dice_count.append(random.randint (1,6))
+    '''     
+    #roll1
+    dice_count = []
+    for x in range(5):
+        dice_count.append(random.randint (1,6))
+    print ('The numbers rolled are:', dice_count)
+
+    #roll2
+    roll2 = (input('What is the position(s) of the die you would like to roll again?'))
+    roll2 = roll2.split()
+    for x, y in enumerate(roll2):
+        roll2[x]=int(y) - 1 
+    for x in roll2:
+        dice_count[x] = random.randint(1,6)
         print ('The numbers rolled are:', dice_count)
 
-        #roll2
-        roll2 = (input('What is the position(s) of the die you would like to roll again?'))
-        roll2 = roll2.split()
-        for x, y in enumerate(roll2):
-            roll2[x]=int(y) - 1 
-        for x in roll2:
-            dice_count[x] = random.randint(1,6)
-            print ('The numbers rolled are:', dice_count)
+    #roll3
+    roll3 = (input('What is the position(s) of the die you would like to roll again?'))
+    roll3 = roll3.split()
+    for x, y in enumerate(roll3):
+        roll3[x]=int(y) - 1 
+    for x in roll3:
+        dice_count[x] = random.randint(1,6)
+        print ('The numbers rolled are:', dice_count)
+    return dice_count
 
-        #roll3
-        roll3 = (input('What is the position(s) of the die you would like to roll again?'))
-        roll3 = roll3.split()
-        for x, y in enumerate(roll3):
-            roll3[x]=int(y) - 1 
-        for x in roll3:
-            dice_count[x] = random.randint(1,6)
-            print ('The numbers rolled are:', dice_count)
-        return dice_count
+class Checks:
+    def __init__(self):
+        ''' ADD DOC '''
+        self._current_dice_list = list()
+        self._current_kept_dice = list()
+    
+
                     
     def numbers(self,dice_count):
         """ Nikita
@@ -193,7 +195,7 @@ def drive_game():
     categories = ["ones","twos","threes","fours","fives","sixes","Three-of-a-kind","Four-of-a-kind", "Full House", "Small Straight", "Large Straight", "Chance", "Yahtzee"]
     categoriesdict = {"ones":[],"twos":[],"threes":[],"fours":[],"fives":[],"sixes":[],"Three-of-a-kind":[],"Four-of-a-kind":[], "Full House":[], "Small Straight":[], "Large Straight":[], "Chance":[], "Yahtzee":[]}
     for i in range(13):
-        roll1 = Roll.roll_dice
+        roll1 = roll_dice()
         print(f'This is your roll {roll1}')
         print(categories)
         turn1 = input("Please pick a scoring category, this is case-sensetive ")
