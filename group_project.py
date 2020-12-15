@@ -4,6 +4,7 @@
 #ADAM MILLS
 import random
 from collections import Counter
+import pandas as pe
 #from statistics import mode 
 
 class Roll:
@@ -187,17 +188,17 @@ class Player:
             print(x,y)   
             
 def drive_game():
-        """ EVERYONE 
-        Drives game calling functions from the classes """
-        Play = input('Would you like to play?')
-        if Play == "yes":
-            rolls = {}
-            categories = ["ones","twos","threes","fours","fives","sixes","Three-of-a-kind","Four-of-a-kind", "Full House", "Small Straight", "Large Straight", "Chance", "Yahtzee"]
-            categoriesdict = {"ones":[],"twos":[],"threes":[],"fours":[],"fives":[],"sixes":[],"Three-of-a-kind":[],"Four-of-a-kind":[], "Full House":[], "Small Straight":[], "Large Straight":[], "Chance":[], "Yahtzee":[]}
-            for i in categories:
-               roll1 = Roll.roll_dice
-            
-        Play = input('Would you like to play again?')
+    """ EVERYONE 
+    Drives game calling functions from the classes """
+    categories = ["ones","twos","threes","fours","fives","sixes","Three-of-a-kind","Four-of-a-kind", "Full House", "Small Straight", "Large Straight", "Chance", "Yahtzee"]
+    categoriesdict = {"ones":[],"twos":[],"threes":[],"fours":[],"fives":[],"sixes":[],"Three-of-a-kind":[],"Four-of-a-kind":[], "Full House":[], "Small Straight":[], "Large Straight":[], "Chance":[], "Yahtzee":[]}
+    for i in range(13):
+        roll1 = Roll.roll_dice
+        print(f'This is your roll {roll1}')
+        print(categories)
+        turn1 = input("Please pick a scoring category, this is case-sensetive ")
+        categoriesdict[turn1].append(roll1)
+        categories.remove(turn1)
 
 if __name__ == '__main__':
     drive_game()
