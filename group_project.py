@@ -98,8 +98,16 @@ class Checks:
         else:
             four_kind = 0
     def smallstraight(self,dice_count):
-        
-        30
+        ss_check1 = [1, 2, 3, 4]
+        ss_check2 = [2, 3, 4, 5]
+        ss_check3 = [3, 4, 5, 6]
+        ss = all(item in dice_count for item ss_check1)
+        ss2 = all(item in dice_count for item ss_check2)
+        ss3 = all(item in dice_count for item ss_check3)
+        if ss or ss2 or ss3  is True:
+            smallstraightc = sum(dice_count)
+        else:
+            smallstraightc = 0
     def largestraight(self,dice_count): 
         dice_sorted = sort(dice_count)
         if dice_sorted == [1, 2, 3, 4, 5] or [2, 3, 4, 5, 6]
