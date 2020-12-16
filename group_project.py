@@ -64,7 +64,7 @@ class Checks:
                 threesc += 3
         return threesc
     def fours(self,dice_count):
-        fourssc = 0
+        foursc = 0
         for i in dice_count:
             if i == 4:
                 foursc += 4
