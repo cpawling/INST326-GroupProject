@@ -118,7 +118,7 @@ class Checks:
             smallstraightc = 0
         return smallstraightc
     def largestraight(self,dice_count): 
-        dice_sorted = sort(dice_count)
+        dice_sorted = sorted(dice_count)
         if dice_sorted == [1, 2, 3, 4, 5] or [2, 3, 4, 5, 6]:
             largestraightc = 40
         else:
