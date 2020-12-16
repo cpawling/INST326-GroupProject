@@ -109,9 +109,9 @@ class Checks:
         ss_check1 = [1, 2, 3, 4]
         ss_check2 = [2, 3, 4, 5]
         ss_check3 = [3, 4, 5, 6]
-        ss = all(item in dice_count for item ss_check1)
-        ss2 = all(item in dice_count for item ss_check2)
-        ss3 = all(item in dice_count for item ss_check3)
+        ss = all(item in dice_count for item in ss_check1)
+        ss2 = all(item in dice_count for item in ss_check2)
+        ss3 = all(item in dice_count for item in ss_check3)
         if ss or ss2 or ss3  is True:
             smallstraightc = sum(dice_count)
         else:
@@ -119,7 +119,7 @@ class Checks:
         return smallstraightc
     def largestraight(self,dice_count): 
         dice_sorted = sort(dice_count)
-        if dice_sorted == [1, 2, 3, 4, 5] or [2, 3, 4, 5, 6]
+        if dice_sorted == [1, 2, 3, 4, 5] or [2, 3, 4, 5, 6]:
             largestraightc = 40
         else:
             largestraightc = 0
@@ -135,19 +135,10 @@ class Checks:
         """
         dice_count.sort()
         if len(set(dice_count))!= 2:
-            print('You did not roll a full house!')
-            #fullhouse = False
-            #return False
+            fullhousec = 25
         elif dice_count[0] != dice_count[3] or dice_count[1] != dice_count[4]:
-            print('You rolled a full house!')
-            #fullhouse = True
-            #return True
-        #else:
-         #   fullhouse = False
-        #if fullhouse == True:
-           # Points += 50
-    #full house --> was made for points, ommitted to make code work, will include in final draft
-
+            fullhousec = 0
+        return fullhousec
     def chance(self,dice_count):
          """
         NIKITA
