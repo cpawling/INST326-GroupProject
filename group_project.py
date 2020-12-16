@@ -146,6 +146,8 @@ class Checks:
         Args:
             dice_count (list): a list containing what the player rolled.
         """
+        chances = sum(dice_count)
+        return chances
 
     def Yahtzee (self,dice_count):
         ''' CHARLES 
