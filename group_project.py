@@ -140,7 +140,7 @@ class Checks:
             fullhousec = 0
         return fullhousec
     def chance(self,dice_count):
-         """
+        """
         NIKITA
             For when the outcome of dice doesn't fit any other category.
             Chance is the sum of the dice.
