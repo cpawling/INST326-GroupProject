@@ -50,31 +50,37 @@ class Checks:
         for i in dice_count:
             if i == 1:
                 onesc += 1
+        return onesc
     def twos(self,dice_count):
         twosc = 0
         for i in dice_count:
             if i == 2:
                 twosc += 2
+        return twosc
     def threes(self,dice_count):
         threesc = 0
         for i in dice_count:
             if i == 3:
                 threesc += 3
+        return threesc
     def fours(self,dice_count):
         fourssc = 0
         for i in dice_count:
             if i == 4:
                 foursc += 4
+        return foursc
     def fives(self,dice_count):
         fivesc = 0
         for i in dice_count:
             if i == 5:
                 fivesc += 5
+        return fivesc
     def sixes(self,dice_count):
         sixesc = 0
         for i in dice_count:
             if i == 6:
                 sixesc += 6
+        return sixesc
     def three_of_a_kind(self,dice_count):
         one_test = dice_count.count(1)
         two_test = dice_count.count(2)
@@ -85,7 +91,8 @@ class Checks:
         if one_test or two_test or three_test or four_test or five_test or six_test >= 3:
             three_kind = sum(dice_count)
         else:
-            four_kind = 0
+            three_kind = 0
+        return three_kind
     def four_of_a_kind(self,dice_count):
         one_testing = dice_count.count(1)
         two_testing = dice_count.count(2)
@@ -97,6 +104,7 @@ class Checks:
             four_kind = sum(dice_count)
         else:
             four_kind = 0
+        return four_kind
     def smallstraight(self,dice_count):
         ss_check1 = [1, 2, 3, 4]
         ss_check2 = [2, 3, 4, 5]
@@ -108,12 +116,14 @@ class Checks:
             smallstraightc = sum(dice_count)
         else:
             smallstraightc = 0
+        return smallstraightc
     def largestraight(self,dice_count): 
         dice_sorted = sort(dice_count)
         if dice_sorted == [1, 2, 3, 4, 5] or [2, 3, 4, 5, 6]
             largestraightc = 40
         else:
             largestraightc = 0
+        return largestraightc
     def full_house(self,dice_count):
         """ CHARLES
         
@@ -158,10 +168,10 @@ class Checks:
                 dice_count (list): a list containing what the player rolled.
         '''
         if len(set(dice_count)) == 1:
-            return True
-            print('Yahtzee!')
-            #Points += 50 
-        return False 
+            yahtzee_score = 50
+        else:
+            yahtzee_score = 0
+        return yahtzee_score 
 
 class Player: 
     def __init__(self, name):
