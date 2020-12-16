@@ -75,10 +75,37 @@ class Checks:
         for i in dice_count:
             if i == 6:
                 sixesc += 6
-    #def three_of_a_kind(self,dice_count):
-    #def four_of_a_kind(self,dice_count):
-    #def smallstraight(self,dice_count):
-    #def largestraight(self,dice_count):    
+    def three_of_a_kind(self,dice_count):
+        one_test = dice_count.count(1)
+        two_test = dice_count.count(2)
+        three_test = dice_count.count(3)
+        four_test = dice_count.count(4)
+        five_test = dice_count.count(5)
+        six_test = dice_count.count(6)
+        if one_test or two_test or three_test or four_test or five_test or six_test >= 3:
+            three_kind = sum(dice_count)
+        else:
+            four_kind = 0
+    def four_of_a_kind(self,dice_count):
+        one_testing = dice_count.count(1)
+        two_testing = dice_count.count(2)
+        three_testing = dice_count.count(3)
+        four_testing = dice_count.count(4)
+        five_testing = dice_count.count(5)
+        six_testing = dice_count.count(6)
+        if one_testing or two_testing or three_testing or four_testing or five_testing or six_testing >= 4:
+            four_kind = sum(dice_count)
+        else:
+            four_kind = 0
+    def smallstraight(self,dice_count):
+        
+        30
+    def largestraight(self,dice_count): 
+        dice_sorted = sort(dice_count)
+        if dice_sorted == [1, 2, 3, 4, 5] or [2, 3, 4, 5, 6]
+            largestraightc = 40
+        else:
+            largestraightc = 0
     def full_house(self,dice_count):
         """ CHARLES
         
