@@ -154,7 +154,11 @@ class Checks:
             dice_count (list): a list containing what the player rolled.
         """
         chances = 0
-        dice_count2 = dice_count
+        tuple_dice = tuple(dice_count)
+        for x in tuple_dice:
+            chances = chances + x
+        #for i in range(0, len(dice_count)):
+            #chances = chances + int(dice_count[i])
         #die1 = dice_count2[0]
         #die1 = int(die1)
         #die2 = dice_count[1]
