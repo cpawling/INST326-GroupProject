@@ -134,9 +134,9 @@ class Checks:
                 dice_count (list): a list containing what the player rolled.
         """
         dice_count.sort()
-        if len(set(dice_count))!= 2:
+        if len(set(dice_count)) == 2:
             fullhousec = 25
-        elif dice_count[0] != dice_count[3] or dice_count[1] != dice_count[4]:
+        else:
             fullhousec = 0
         return fullhousec
     def chance(self,dice_count):
@@ -164,7 +164,7 @@ class Checks:
             yahtzee_score = 0
         return yahtzee_score 
 
-class Player: 
+class Score: 
     def __init__(self, name):
        
         """
