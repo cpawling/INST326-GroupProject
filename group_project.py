@@ -41,10 +41,7 @@ def roll_dice():
 class Checks:
     def __init__(self):
         ''' ADD DOC '''
-        #Need dice count?
-        self._current_dice_list = list()
-        self._current_kept_dice = list()
-            
+        pass
     def ones(self,dice_count):
         onesc = 0
         for i in dice_count:
@@ -174,7 +171,7 @@ class Checks:
 
 class Score: 
     def __init__(self):
-        
+        pass
     def add_upper_score(self, ones, twos, threes, fours, fives, sixes):
         """CHARLES 
         This function adds a rolled score to the top part of the scoreboard, which tracks ones, twos, threes, fours, fives, and sixes.
