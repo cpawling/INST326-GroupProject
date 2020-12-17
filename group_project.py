@@ -179,13 +179,17 @@ class Score:
         self._scoreboard_lowerbonus = 0
         self.scoreboard_total = 0 
         
-    def add_dice_rolled(self, rolled, Points):
+    def Points_calculatuions(self, rolled, Points):
         """ MILTO 
         This function takes the dice rolls and adds them to the scoreboard
         Args:
             ROLLED (list): a list containing what the player rolled.
             POINTS (int): the amount to be added to the scoreboard
         """
+        Points = 0
+        Points = (onesc + twosc + threesc + foursc + fivesc + sixesc + three_kind + four_kind + smallstraightc + largestraightc 
+            + fullhousec + yahtzee_score) 
+        #Add in Chance Score
     def add_upper_score(self, Points):
         """CHARLES 
         This function adds a rolled score to the top part of the scoreboard, which tracks ones, twos, threes, fours, fives, and sixes.
