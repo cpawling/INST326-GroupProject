@@ -259,8 +259,7 @@ def drive_game():
     smalls = c.smallstraight(categoriesdict["Small Straight"])
     large = c.largestraight(categoriesdict["Large Straight"])
     fh = c.full_house(categoriesdict["Full House"])
-    #chan = c.chance(categoriesdict["Chance"])
-    chan = 0
+    chan = c.chance(categoriesdict["Chance"])
     yahtz = c.Yahtzee(categoriesdict["Yahtzee"])
     upper = s.add_upper_score(one, two, three, four, five, six)
     bonus = s.add_upper_bonus(upper)
