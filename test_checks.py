@@ -13,9 +13,9 @@ def test_checks():
     assert c.three_of_a_kind([1,1,1,2,3]) == 8
     assert c.four_of_a_kind([1,4,4,4,4]) == 17
     assert c.smallstraight([1,2,3,4,6]) == 16
-    assert c.largestraight([2,3,4,5,6]) == 40
+    assert c.largestraight([2,3,4,5,6]) == 41
     assert c.full_house([1,1,1,5,5]) == 25
-    assert c.chance([6,6,6,6,6]) == 30
+    assert c.chance([6,6,6,6,6]) == 31
     assert c.Yahtzee([3,3,3,3,3]) == 50
     assert c.Yahtzee([1,3,2,1,6]) == 0
     
