@@ -82,25 +82,21 @@ class Checks:
                 sixesc += 6
         return sixesc
     def three_of_a_kind(self,dice_count):
-        one_test = dice_count.count(1)
-        two_test = dice_count.count(2)
-        three_test = dice_count.count(3)
-        four_test = dice_count.count(4)
-        five_test = dice_count.count(5)
-        six_test = dice_count.count(6)
-        if one_test or two_test or three_test or four_test or five_test or six_test >= 3:
+        '''
+        Used our first source
+        '''
+        dice_count.sort()
+        if dice_count[0] == dice_count[2] or dice_count[1] == dice_count[3] or dice_count[2] == dice_count[4]:
             three_kind = sum(dice_count)
         else:
             three_kind = 0
         return three_kind
     def four_of_a_kind(self,dice_count):
-        one_testing = dice_count.count(1)
-        two_testing = dice_count.count(2)
-        three_testing = dice_count.count(3)
-        four_testing = dice_count.count(4)
-        five_testing = dice_count.count(5)
-        six_testing = dice_count.count(6)
-        if one_testing or two_testing or three_testing or four_testing or five_testing or six_testing >= 4:
+        '''
+        Used our first source
+        '''
+        dice_count.sort()
+        if dice_count[0] == dice_count[3] or dice_count[1] == dice_count[4]:
             four_kind = sum(dice_count)
         else:
             four_kind = 0
@@ -153,10 +149,11 @@ class Checks:
         Args:
             dice_count (list): a list containing what the player rolled.
         """
-        chances = 0
-        tuple_dice = tuple(dice_count)
-        for x in tuple_dice:
-            chances = chances + x
+        chances = sum(dice_count)
+        #chances = 0
+        #tuple_dice = tuple(dice_count)
+        #for x in tuple_dice:
+            #chances = chances + x
         #for i in range(0, len(dice_count)):
             #chances = chances + int(dice_count[i])
         #die1 = dice_count2[0]
@@ -258,14 +255,17 @@ def drive_game():
     """ EVERYONE 
     Drives game calling functions from the classes """
     categories = ["ones","twos","threes","fours","fives","sixes","Three-of-a-kind","Four-of-a-kind", "Full House", "Small Straight", "Large Straight", "Chance", "Yahtzee"]
-    categoriesdict = {"ones":[],"twos":[],"threes":[],"fours":[],"fives":[],"sixes":[],"Three-of-a-kind":[],"Four-of-a-kind":[], "Full House":[], "Small Straight":[], "Large Straight":[], "Chance":[], "Yahtzee":[]}
+    #categoriesdict = {"ones":[],"twos":[],"threes":[],"fours":[],"fives":[],"sixes":[],"Three-of-a-kind":[],"Four-of-a-kind":[], "Full House":[], "Small Straight":[], "Large Straight":[], "Chance":[], "Yahtzee":[]}
+    categoriesdict = {}
     for i in range(13):
         roll1 = roll_dice()
         print(f'This is your roll {roll1}')
         print(categories)
         turn1 = input("Please pick a scoring category, this is case-sensetive ")
-        categoriesdict[turn1].append(roll1)
+        categoriesdict[turn1] = roll1
         categories.remove(turn1)
+    print(categories)
+    print(categoriesdict)
     c = Checks()
     s = Score()
     one = c.ones(categoriesdict['ones'])
