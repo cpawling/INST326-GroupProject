@@ -240,8 +240,7 @@ def drive_game():
         arglist (list of str): command-line arguments to parse.
     
     Returns:
-        namespace: the parsed arguments as a namespace with variables
-        movies and ratings
+        namespace: 
     """
     parser = ArgumentParser()
     parser.add_argument("", help="")
