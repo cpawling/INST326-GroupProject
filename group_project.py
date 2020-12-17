@@ -4,7 +4,7 @@
 #ADAM MILLS
 import random
 from collections import Counter
-#from statistics import mode 
+import sys 
 
 def roll_dice():
     '''Nikita
@@ -230,39 +230,7 @@ def drive_game():
     Final_score = total_up + three_k + four_k + smalls + large + fh + chan + yahtz
     print(Final_score)
     
-    
-    
-    def parse_args(arglist):
-    """ Parse command line arguments.
-    
-
-    Args:
-        arglist (list of str): command-line arguments to parse.
-    
-    Returns:
-        namespace: the parsed arguments as a namespace with variables
-        movies and ratings
-    """
-    parser = ArgumentParser()
-    parser.add_argument("", help="")
-    parser.add_argument("r", help="")
-    return parser.parse_args(arglist)
-
-
-if __name__ == "__main__":
-    args = parse_args(sys.argv[1:])
-    results = #function(args. , args. )
-    print(final_score())
-    
-    
-    
-    
-
-
-
-
-
-
+ 
 
 if __name__ == '__main__':
     drive_game()
