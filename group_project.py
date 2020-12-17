@@ -165,14 +165,13 @@ class Checks:
         return yahtzee_score 
 
 class Score: 
-    def __init__(self, name):
+    def __init__(self):
        
         """
         This function establishes different variables, which will be used to track the players  name and parts of the scoreboard
         Args:
             name (str): a str containing what the player input for their name.capitalize
         """
-        self.name = name
         self.scoreboard = {}
         self.scoreboard_upperhalf = 0
         self.scoreboard_lowerhalf = 0
@@ -190,27 +189,29 @@ class Score:
         Points = (onesc + twosc + threesc + foursc + fivesc + sixesc + three_kind + four_kind + smallstraightc + largestraightc 
             + fullhousec + yahtzee_score) 
         #Add in Chance Score
-    def add_upper_score(self, Points):
+    def add_upper_score(self, ones, twos, threes, fours, fives, sixes):
         """CHARLES 
         This function adds a rolled score to the top part of the scoreboard, which tracks ones, twos, threes, fours, fives, and sixes.
         Args:
             value (int): the amount to be added to the scoreboard"""
-        self.scoreboard_upperhalf += Points
-    def add_upper_bonus(self): 
+        upper_score = sum(ones, twos, threes, fours, fives, sixes)
+        return upper_score
+    def add_upper_bonus(self, upper_score): 
         """ADAM
         This function compares the top scoreboard with the points needed to earn a bonus
         """
         score_for_bonus = 63
-        if self.scoreboard_upperhalf >= score_for_bonus:
-            self.scoreboard['upper bonus'] = 50
+        if upper_score >= score_for_bonus:
+            upp_bonus = 35
         else:
-            self.scoreboard['upper bonus'] = 0
-        self.upper_bonus = self.scoreboard['upper bonus']
-    def get_upper_score(self):
+            upp_bonus = 0
+        return upp_bonus
+    def get_upper_score(self, upper_score, upp_bonus):
         """ADAM
         This function returns the users top score and bonus if any points were earned
         """
-        return self.scoreboard_upperhalf
+        total_upper_score = upper_score + upp_bonus
+        return total_upper_score
     def final_scoreboard(self):
         """ADAM
         This function prints the scoreboard for the user to see
@@ -230,6 +231,29 @@ def drive_game():
         turn1 = input("Please pick a scoring category, this is case-sensetive ")
         categoriesdict[turn1].append(roll1)
         categories.remove(turn1)
+    c = Checks()
+    s = Score()
+    one = c.ones(categoriesdict["ones"])
+    two = c.twos(categoriesdict["twos"])
+    three = c.threes(categoriesdict["threes"])
+    four = c.fours(categoriesdict["fours"])
+    five = c.fives(categoriesdict["fives"])
+    six = c.sixes(categoriesdict["sixes"])
+    three_k = c.three_of_a_kind(categoriesdict["Three-of-a-kind"])
+    four_k = c.four_of_a_kind(categoriesdict["Four-of-a-kind"])
+    smalls = c.smallstraight(categoriesdict["Small Straight"])
+    large = c.largestraight(categoriesdict["Large Straight"])
+    fh = c.full_house(categoriesdict["Full House"])
+    chan = c.chance(categoriesdict["Chance"])
+    yahtz = c.Yahtzee(categoriesdict["Yahtzee"])
+    upper = s.add_upper_score(one, two, three, four, five, six)
+    bonus = s.add_upper_bonus(upper)
+    total_up = s.get_upper_score(upper, bonus)
+    
+    
+    
+    
+    
 
 if __name__ == '__main__':
     drive_game()
