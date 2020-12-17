@@ -174,28 +174,6 @@ class Checks:
 
 class Score: 
     def __init__(self):
-       
-        """
-        This function establishes different variables, which will be used to track the players  name and parts of the scoreboard
-        Args:
-            name (str): a str containing what the player input for their name.capitalize
-        """
-        self.scoreboard = {}
-        self.scoreboard_upperhalf = 0
-        self.scoreboard_lowerhalf = 0
-        self._scoreboard_lowerbonus = 0
-        self.scoreboard_total = 0 
-        
-    def Points_calculatuions(self, rolled, Points):
-        """ MILTO 
-        This function takes the dice rolls and adds them to the scoreboard
-        Args:
-            ROLLED (list): a list containing what the player rolled.
-            POINTS (int): the amount to be added to the scoreboard
-        """
-        Points = 0
-        Points = (onesc + twosc + threesc + foursc + fivesc + sixesc + three_kind + four_kind + smallstraightc + largestraightc 
-            + fullhousec + yahtzee_score + chances) 
         
     def add_upper_score(self, ones, twos, threes, fours, fives, sixes):
         """CHARLES 
@@ -219,13 +197,7 @@ class Score:
         This function returns the users top score and bonus if any points were earned
         """
         total_upper_score = upper_score + upp_bonus
-        return total_upper_score
-    def final_scoreboard(self):
-        """ADAM
-        This function prints the scoreboard for the user to see
-        """
-        for x, y in self.scoreboard:
-            print(x,y)   
+        return total_upper_score 
             
 def drive_game():
     """ EVERYONE 
