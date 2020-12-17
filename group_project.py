@@ -232,7 +232,38 @@ def drive_game():
     
     
     
+    def parse_args(arglist):
+    """ Parse command line arguments.
     
+
+    Args:
+        arglist (list of str): command-line arguments to parse.
+    
+    Returns:
+        namespace: the parsed arguments as a namespace with variables
+        movies and ratings
+    """
+    parser = ArgumentParser()
+    parser.add_argument("", help="")
+    parser.add_argument("r", help="")
+    return parser.parse_args(arglist)
+
+
+if __name__ == "__main__":
+    args = parse_args(sys.argv[1:])
+    results = #function(args. , args. )
+    print(final_score())
+    
+    
+    
+    
+
+
+
+
+
+
 
 if __name__ == '__main__':
     drive_game()
+    
