@@ -132,9 +132,15 @@ class Checks:
             Points: 25
         Args:
                 dice_count (list): a list containing what the player rolled.
+        got from source ***** check in resources
         """
-        dice_count.sort()
-        if len(set(dice_count)) == 2:
+        unique_dice = []
+        num = 0
+        for item in dice_count:
+            if item not in unique_dice:
+                num += 1
+                unique_dice.append(item)
+        if num == 2:
             fullhousec = 25
         else:
             fullhousec = 0
@@ -147,7 +153,10 @@ class Checks:
         Args:
             dice_count (list): a list containing what the player rolled.
         """
-        chances = sum(dice_count)
+        chances = 0
+        for i in range(5):
+            temp = dice_count[i]
+            chances += temp
         return chances
 
     def Yahtzee (self,dice_count):
@@ -158,11 +167,17 @@ class Checks:
         Args:
                 dice_count (list): a list containing what the player rolled.
         '''
-        if len(set(dice_count)) == 1:
+        solo_dice = []
+        num = 0
+        for item in dice_count:
+            if item not in solo_dice:
+                num += 1
+                solo_dice.append(item)
+        if num == 1:
             yahtzee_score = 50
         else:
             yahtzee_score = 0
-        return yahtzee_score 
+        return yahtzee_score
 
 class Score: 
     def __init__(self):
@@ -194,7 +209,7 @@ class Score:
         This function adds a rolled score to the top part of the scoreboard, which tracks ones, twos, threes, fours, fives, and sixes.
         Args:
             value (int): the amount to be added to the scoreboard"""
-        upper_score = sum(ones, twos, threes, fours, fives, sixes)
+        upper_score = ones + twos + threes + fours + fives + sixes
         return upper_score
     def add_upper_bonus(self, upper_score): 
         """ADAM
@@ -244,12 +259,14 @@ def drive_game():
     smalls = c.smallstraight(categoriesdict["Small Straight"])
     large = c.largestraight(categoriesdict["Large Straight"])
     fh = c.full_house(categoriesdict["Full House"])
-    chan = c.chance(categoriesdict["Chance"])
+    #chan = c.chance(categoriesdict["Chance"])
+    chan = 0
     yahtz = c.Yahtzee(categoriesdict["Yahtzee"])
     upper = s.add_upper_score(one, two, three, four, five, six)
     bonus = s.add_upper_bonus(upper)
     total_up = s.get_upper_score(upper, bonus)
-    
+    Final_score = total_up + three_k + four_k + smalls + large + fh + chan + yahtz
+    print(Final_score)
     
     
     
