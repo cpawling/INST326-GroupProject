@@ -150,30 +150,6 @@ class Checks:
             dice_count (list): a list containing what the player rolled.
         """
         chances = sum(dice_count)
-        #chances = 0
-        #tuple_dice = tuple(dice_count)
-        #for x in tuple_dice:
-            #chances = chances + x
-        #for i in range(0, len(dice_count)):
-            #chances = chances + int(dice_count[i])
-        #die1 = dice_count2[0]
-        #die1 = int(die1)
-        #die2 = dice_count[1]
-        #die2 = int(die2)
-        #die3 = dice_count[2]
-        #die3 = int(die3)
-        #die4 = dice_count[3]
-        #die4 = int(die4)
-        #die5 = dice_count[4]
-        #die5 = int(die5)
-        #dice_count2 = [int(i) for i in dice_count2]
-        #die1, die2, die3, die4, die5 = [int(i) for i in dice_count2]
-        #chances = (die1 + die2 + die3 + die4 + die5)
-        #dice_count2 = dice_count
-        #float(i) for i in dice_count2]
-        #for i in range(len(*dice_count2)):
-            #s = int(i)
-            #chances += s
         return chances
 
     def Yahtzee (self,dice_count):
