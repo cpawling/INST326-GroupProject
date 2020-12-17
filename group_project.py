@@ -264,8 +264,6 @@ def drive_game():
         turn1 = input("Please pick a scoring category, this is case-sensetive ")
         categoriesdict[turn1] = roll1
         categories.remove(turn1)
-    print(categories)
-    print(categoriesdict)
     c = Checks()
     s = Score()
     one = c.ones(categoriesdict['ones'])

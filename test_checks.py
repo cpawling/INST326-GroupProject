@@ -1,4 +1,5 @@
 from group_project import Checks
+from group_project import Score
 import pytest
 
 def test_checks():
@@ -29,6 +30,15 @@ def test_checks():
     assert c.chance([1,1,2,6,3]) == 13
     assert c.Yahtzee([3,3,3,3,3]) == 50
     assert c.Yahtzee([1,3,2,1,6]) == 0
-    
-    
-    
+
+def test_score():
+    ''' this will test all the checks inside the Checks class'''
+    s = Score()
+    assert s.add_upper_score(3, 6, 9, 12, 15, 18) == 63
+    assert s.add_upper_score(0,0,0,0,0,0) == 0
+    assert s.add_upper_bonus(63) == 35
+    assert s.add_upper_bonus(62) == 0
+    assert s.add_upper_bonus(0) == 0
+    assert s.add_upper_bonus(160) == 35
+    assert s.get_upper_score(50, 0) == 50
+    assert s.get_upper_score(64, 35) == 99
