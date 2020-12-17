@@ -154,9 +154,25 @@ class Checks:
             dice_count (list): a list containing what the player rolled.
         """
         chances = 0
-        for i in range(5):
-            temp = dice_count[i]
-            chances += temp
+        dice_count2 = dice_count
+        #die1 = dice_count2[0]
+        #die1 = int(die1)
+        #die2 = dice_count[1]
+        #die2 = int(die2)
+        #die3 = dice_count[2]
+        #die3 = int(die3)
+        #die4 = dice_count[3]
+        #die4 = int(die4)
+        #die5 = dice_count[4]
+        #die5 = int(die5)
+        #dice_count2 = [int(i) for i in dice_count2]
+        #die1, die2, die3, die4, die5 = [int(i) for i in dice_count2]
+        #chances = (die1 + die2 + die3 + die4 + die5)
+        #dice_count2 = dice_count
+        #float(i) for i in dice_count2]
+        #for i in range(len(*dice_count2)):
+            #s = int(i)
+            #chances += s
         return chances
 
     def Yahtzee (self,dice_count):
@@ -202,8 +218,8 @@ class Score:
         """
         Points = 0
         Points = (onesc + twosc + threesc + foursc + fivesc + sixesc + three_kind + four_kind + smallstraightc + largestraightc 
-            + fullhousec + yahtzee_score) 
-        #Add in Chance Score
+            + fullhousec + yahtzee_score + chances) 
+        
     def add_upper_score(self, ones, twos, threes, fours, fives, sixes):
         """CHARLES 
         This function adds a rolled score to the top part of the scoreboard, which tracks ones, twos, threes, fours, fives, and sixes.
