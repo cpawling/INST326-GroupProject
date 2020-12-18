@@ -19,7 +19,7 @@ def roll_dice():
     print ('The numbers rolled are:', dice_count)
 
     #roll2
-    roll2 = (input('What is the position(s) of the die you would like to roll again?'))
+    roll2 = (input('What is the position(s) of the die you would like to roll again? (Format-# # # # #) '))
     roll2 = roll2.split()
     for x, y in enumerate(roll2):
         roll2[x]=int(y) - 1 
@@ -28,13 +28,13 @@ def roll_dice():
         print ('The numbers rolled are:', dice_count)
 
     #roll3
-    roll3 = (input('What is the position(s) of the die you would like to roll again?'))
+    roll3 = (input('What is the position(s) of the die you would like to roll again? (Format-# # # # #) '))
     roll3 = roll3.split()
     for x, y in enumerate(roll3):
         roll3[x]=int(y) - 1 
     for x in roll3:
         dice_count[x] = random.randint(1,6)
-        print ('The numbers rolled are:', dice_count)
+        print ('The final numbers rolled are: ', dice_count)
     return dice_count
 
 class Checks:
@@ -71,9 +71,10 @@ class Checks:
                 threesc += 3
         return threesc
     def fours(self,dice_count):
-       '''Purpose: Checks to see how many 4's are in dice_count, and updates points accordingly.
+        '''Purpose: Checks to see how many 4's are in dice_count, and updates points accordingly.
            Args:
-                dice_count (list): A list containing what the player rolled.'''
+                dice_count (list): A list containing what the player rolled.
+        '''
         foursc = 0
         for i in dice_count:
             if i == 4:
@@ -221,7 +222,7 @@ class Score:
         return total_upper_score 
             
 def drive_game():
-        '''Purpose: Drives game calling functions from the classes. '''  
+    '''Purpose: Drives game calling functions from the classes. '''  
     categories = ["ones","twos","threes","fours","fives","sixes","Three-of-a-kind","Four-of-a-kind", "Full House", "Small Straight", "Large Straight", "Chance", "Yahtzee"]
     #categoriesdict = {"ones":[],"twos":[],"threes":[],"fours":[],"fives":[],"sixes":[],"Three-of-a-kind":[],"Four-of-a-kind":[], "Full House":[], "Small Straight":[], "Large Straight":[], "Chance":[], "Yahtzee":[]}
     categoriesdict = {}
@@ -229,7 +230,7 @@ def drive_game():
         roll1 = roll_dice()
         print(f'This is your roll {roll1}')
         print(categories)
-        turn1 = input("Please pick a scoring category, this is case-sensetive ")
+        turn1 = input("Please pick a scoring category, this is case-sensetive to the list above; ")
         categoriesdict[turn1] = roll1
         categories.remove(turn1)
     c = Checks()
