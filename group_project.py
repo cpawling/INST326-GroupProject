@@ -103,7 +103,7 @@ class Checks:
            Args:
                 dice_count (list): A list containing what the player rolled.
            Source Used:
-                #1: our first source'''
+                https://medium.com/better-programming/interview-questions-write-yahtzee-in-python-72695550d84e'''
         dice_count.sort()
         if dice_count[0] == dice_count[2] or dice_count[1] == dice_count[3] or dice_count[2] == dice_count[4]:
             three_kind = sum(dice_count)
@@ -115,7 +115,7 @@ class Checks:
            Args:
                 dice_count (list): A list containing what the player rolled.
            Source Used:
-                #1: our first source'''
+                https://medium.com/better-programming/interview-questions-write-yahtzee-in-python-72695550d84e'''
         dice_count.sort()
         if dice_count[0] == dice_count[3] or dice_count[1] == dice_count[4]:
             four_kind = sum(dice_count)
@@ -152,7 +152,7 @@ class Checks:
            Args:
                 dice_count (list): A list containing what the player rolled.
            Source Used:
-                ***check in resources'''
+                https://www.geeksforgeeks.org/how-to-count-unique-values-inside-a-list/'''
         unique_dice = []
         num = 0
         for item in dice_count:
@@ -169,7 +169,7 @@ class Checks:
            Args:
                 dice_count (list): A list containing what the player rolled.
            Source Used:
-                #1: our first source'''
+                https://medium.com/better-programming/interview-questions-write-yahtzee-in-python-72695550d84e'''
         chances = sum(dice_count)
         return chances
     def Yahtzee (self,dice_count):
