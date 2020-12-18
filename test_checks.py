@@ -1,5 +1,5 @@
-from group_project import Checks
-from group_project import Score
+from yahtzee_game import Checks
+from yahtzee_game import Score
 import pytest
 
 def test_checks():
@@ -32,7 +32,7 @@ def test_checks():
     assert c.Yahtzee([1,3,2,1,6]) == 0
 
 def test_score():
-    ''' this will test all the checks inside the Checks class'''
+    ''' this will test all the scoring inside the Score class'''
     s = Score()
     assert s.add_upper_score(3, 6, 9, 12, 15, 18) == 63
     assert s.add_upper_score(0,0,0,0,0,0) == 0
