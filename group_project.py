@@ -252,7 +252,21 @@ def drive_game():
     bonus = s.add_upper_bonus(upper)
     total_up = s.get_upper_score(upper, bonus)
     Final_score = total_up + three_k + four_k + smalls + large + fh + chan + yahtz
-    print(Final_score)
+    print(f'Ones: {one}')
+    print(f'Twos: {two}')
+    print(f'Threes: {three}')
+    print(f'Fours: {four}')
+    print(f'Fives: {five}')
+    print(f'Sixes: {six}')
+    print(f'Your Upper Bonus: {bonus}')
+    print(f'Three-of-a-kind: {three_k}')
+    print(f'Four-of-a-kind: {four_k}')
+    print(f'Small Straight: {smalls}')
+    print(f'Large Straight: {large}')
+    print(f'Full House: {fh}')
+    print(f'Chance: {chan}')
+    print(f'Yahtzee: {yahtz}')
+    print(f'Final Score: {Final_score}')
     
 if __name__ == '__main__':
     drive_game()
