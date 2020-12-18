@@ -217,7 +217,9 @@ class Score:
         '''Purpose: This function returns the users top score and bonus if any points were earned
            Args:
                 upper_score: Addition of points stored in methods one - six.
-                upp_bonus:  '''
+                upp_bonus: Method to calculate whether player has enough points to attain a bonus of 50 points. 
+                The player is eligible to attain upp_bonus if the total of their points gained from methods ones - sixes
+                equals 63 points or more.'''
         total_upper_score = upper_score + upp_bonus
         return total_upper_score 
             
