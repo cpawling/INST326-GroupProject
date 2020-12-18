@@ -7,11 +7,10 @@ from collections import Counter
 import sys 
 
 def roll_dice():
-    '''Nikita
-        The purpose of this function is to simulate the rolling of a dice, three times. After each roll, the user can decide which 'dice' they
+    '''The purpose of this function is to simulate the rolling of a dice, three times. After each roll, the user can decide which 'dice' they
         would like to roll again, and which they would like to keep.
         Returns:
-            Dice_count (list): list containing the final numbers rolled
+            Dice_count (list): list containing the final numbers of the "dice" rolled.
     '''     
     #roll1
     dice_count = []
@@ -39,49 +38,71 @@ def roll_dice():
     return dice_count
 
 class Checks:
+    '''Purpose: Checks to see which category dice_count fits into.
+       Attributes:
+            dice_count (list): The numbers rolled on the dice of the final roll, implemented as a list.'''
     def __init__(self):
-        ''' ADD DOC '''
         pass
     def ones(self,dice_count):
+        '''Purpose: Checks to see how many 1's are in dice_count, and updates points accordingly.
+           Args:
+                dice_count (list): A list containing what the player rolled.'''        
         onesc = 0
         for i in dice_count:
             if i == 1:
                 onesc += 1
         return onesc
     def twos(self,dice_count):
+        '''Purpose: Checks to see how many 2's are in dice_count, and updates points accordingly.
+           Args:
+                dice_count (list): A list containing what the player rolled.'''
         twosc = 0
         for i in dice_count:
             if i == 2:
                 twosc += 2
         return twosc
     def threes(self,dice_count):
+        '''Purpose: Checks to see how many 3's are in dice_count, and updates points accordingly.
+           Args:
+                dice_count (list): A list containing what the player rolled.'''        
         threesc = 0
         for i in dice_count:
             if i == 3:
                 threesc += 3
         return threesc
     def fours(self,dice_count):
+       '''Purpose: Checks to see how many 4's are in dice_count, and updates points accordingly.
+           Args:
+                dice_count (list): A list containing what the player rolled.'''
         foursc = 0
         for i in dice_count:
             if i == 4:
                 foursc += 4
         return foursc
     def fives(self,dice_count):
+        '''Purpose: Checks to see how many 5's are in dice_count, and updates points accordingly.
+           Args:
+                dice_count (list): A list containing what the player rolled.'''
         fivesc = 0
         for i in dice_count:
             if i == 5:
                 fivesc += 5
         return fivesc
     def sixes(self,dice_count):
+        '''Purpose: Checks to see how many 6's are in dice_count, and updates points accordingly.
+           Args:
+                dice_count (list): A list containing what the player rolled.'''
         sixesc = 0
         for i in dice_count:
             if i == 6:
                 sixesc += 6
         return sixesc
     def three_of_a_kind(self,dice_count):
-        '''
-        Used our first source
-        '''
+        '''Purpose: Checks to see if dice_count contains atleast three rolled '3's and updates points accordingly.
+           Args:
+                dice_count (list): A list containing what the player rolled.
+           Source Used:
+                #1: our first source'''
         dice_count.sort()
         if dice_count[0] == dice_count[2] or dice_count[1] == dice_count[3] or dice_count[2] == dice_count[4]:
             three_kind = sum(dice_count)
@@ -89,9 +110,11 @@ class Checks:
             three_kind = 0
         return three_kind
     def four_of_a_kind(self,dice_count):
-        '''
-        Used our first source
-        '''
+        '''Purpose: Checks to see if dice_count contains atleast four rolled '4's and updates points accordingly.
+           Args:
+                dice_count (list): A list containing what the player rolled.
+           Source Used:
+                #1: our first source'''
         dice_count.sort()
         if dice_count[0] == dice_count[3] or dice_count[1] == dice_count[4]:
             four_kind = sum(dice_count)
@@ -99,6 +122,9 @@ class Checks:
             four_kind = 0
         return four_kind
     def smallstraight(self,dice_count):
+        '''Purpose: Checks to see if dice_count contains any sequence of four consecutive numbers and updates points accordingly.
+           Args:
+                dice_count (list): A list containing what the player rolled.'''
         ss_check1 = [1, 2, 3, 4]
         ss_check2 = [2, 3, 4, 5]
         ss_check3 = [3, 4, 5, 6]
@@ -111,6 +137,9 @@ class Checks:
             smallstraightc = 0
         return smallstraightc
     def largestraight(self,dice_count): 
+        '''Purpose: Checks to see if dice_count contains any sequence of five consecutive numbers and updates points accordingly.
+           Args:
+                dice_count (list): A list containing what the player rolled.'''
         dice_sorted = sorted(dice_count)
         if dice_sorted == [1, 2, 3, 4, 5] or [2, 3, 4, 5, 6]:
             largestraightc = 40
@@ -118,15 +147,11 @@ class Checks:
             largestraightc = 0
         return largestraightc
     def full_house(self,dice_count):
-        """ CHARLES
-        
-            Check to see if player got three of a kind + 1 pair
-            Ex: 1,1,1,6,6 or 2,2,5,5,5
-            Points: 25
-        Args:
-                dice_count (list): a list containing what the player rolled.
-        got from source ***** check in resources
-        """
+        '''Purpose: Checks to see if dice_count contains three of the same number, as well as one pair and updates points accordingly.
+           Args:
+                dice_count (list): A list containing what the player rolled.
+           Source Used:
+                ***check in resources'''
         unique_dice = []
         num = 0
         for item in dice_count:
@@ -139,24 +164,17 @@ class Checks:
             fullhousec = 0
         return fullhousec
     def chance(self,dice_count):
-        """
-        NIKITA
-            For when the outcome of dice doesn't fit any other category.
-            Chance is the sum of the dice.
-        Args:
-            dice_count (list): a list containing what the player rolled.
-        """
+        '''Purpose: Adds sum of numbers rolled in dice_count and updates points accordingly.
+           Args:
+                dice_count (list): A list containing what the player rolled.
+           Source Used:
+                #1: our first source'''
         chances = sum(dice_count)
         return chances
-
     def Yahtzee (self,dice_count):
-        ''' CHARLES 
-            Check to see if player got five of a kind. 
-            Ex: 2,2,2,2,2 or 5,5,5,5,5
-            Points: 50
-        Args:
-                dice_count (list): a list containing what the player rolled.
-        '''
+        '''Purpose: Checks to see if player rolled five of the same number in dice_count and updates points accordingly.
+           Args:
+                dice_count (list): A list containing what the player rolled.'''
         solo_dice = []
         num = 0
         for item in dice_count:
@@ -170,19 +188,24 @@ class Checks:
         return yahtzee_score
 
 class Score: 
+    '''Purpose: Calculates and displays various scores.'''
     def __init__(self):
         pass
     def add_upper_score(self, ones, twos, threes, fours, fives, sixes):
-        """CHARLES 
-        This function adds a rolled score to the top part of the scoreboard, which tracks ones, twos, threes, fours, fives, and sixes.
-        Args:
-            value (int): the amount to be added to the scoreboard"""
+        '''Purpose: This function adds a rolled score to the top part of the scoreboard, which tracks ones, twos, threes, fours, fives, and sixes.
+           Args:
+                ones (method): Checks to see how many 1's are in dice_count, and updates points accordingly.
+                twos (method): Checks to see how many 2's are in dice_count, and updates points accordingly.
+                threes (method): Checks to see how many 3's are in dice_count, and updates points accordingly.
+                fours (method): Checks to see how many 4's are in dice_count, and updates points accordingly.
+                fives (method): Checks to see how many 5's are in dice_count, and updates points accordingly.
+                sixes (method): Checks to see how many 6's are in dice_count, and updates points accordingly.'''
         upper_score = ones + twos + threes + fours + fives + sixes
         return upper_score
     def add_upper_bonus(self, upper_score): 
-        """ADAM
-        This function compares the top scoreboard with the points needed to earn a bonus
-        """
+        '''Purpose: This function compares the top scoreboard with the points needed to earn a bonus
+           Args:
+                upper_score: Addition of points stored in methods one - six.  '''
         score_for_bonus = 63
         if upper_score >= score_for_bonus:
             upp_bonus = 35
@@ -190,15 +213,15 @@ class Score:
             upp_bonus = 0
         return upp_bonus
     def get_upper_score(self, upper_score, upp_bonus):
-        """ADAM
-        This function returns the users top score and bonus if any points were earned
-        """
+        '''Purpose: This function returns the users top score and bonus if any points were earned
+           Args:
+                upper_score: Addition of points stored in methods one - six.
+                upp_bonus:  '''
         total_upper_score = upper_score + upp_bonus
         return total_upper_score 
             
 def drive_game():
-    """ EVERYONE 
-    Drives game calling functions from the classes """
+        '''Purpose: Drives game calling functions from the classes. '''  
     categories = ["ones","twos","threes","fours","fives","sixes","Three-of-a-kind","Four-of-a-kind", "Full House", "Small Straight", "Large Straight", "Chance", "Yahtzee"]
     #categoriesdict = {"ones":[],"twos":[],"threes":[],"fours":[],"fives":[],"sixes":[],"Three-of-a-kind":[],"Four-of-a-kind":[], "Full House":[], "Small Straight":[], "Large Straight":[], "Chance":[], "Yahtzee":[]}
     categoriesdict = {}
@@ -230,8 +253,6 @@ def drive_game():
     Final_score = total_up + three_k + four_k + smalls + large + fh + chan + yahtz
     print(Final_score)
     
- 
-
 if __name__ == '__main__':
     drive_game()
     
